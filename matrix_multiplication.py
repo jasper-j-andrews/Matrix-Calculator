@@ -13,6 +13,7 @@ def calculate_product(A, B):
                 sum += A[i][x]*B[x][j]
             c_row.append(sum)
         C.append(c_row)
+    return C
 
 calculate_product(X, Y)
 calculate_product(Z, X)
