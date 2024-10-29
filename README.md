@@ -1,2 +1,2 @@
-# Matrix-Determinant-Calculator
- Calculates the determinant of a given matrix.
+# Matrix-Calculator
+ Provides a number of helpful matrix calculations, including determinants and matrix products.
