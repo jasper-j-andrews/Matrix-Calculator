@@ -11,7 +11,7 @@ one_val = [[9]]
 
 null_matrix = []
 
-def calculate_determinant(matrix):
+def determinant(matrix):
     # If matrix does not have a determinant, return INVALID MATRIX
     if len(matrix) == 0 or (len(matrix) != len(matrix[0])): return 'INVALID MATRIX'
     if len(matrix) == 1: return matrix[0][0] # The determinant of a 1x1 matrix is itself.
@@ -24,7 +24,7 @@ def calculate_determinant(matrix):
         minor = [
             [matrix[i][j] for j in range(len(matrix)) if j!= col] for i in range(1, len(matrix))
         ]
-        determinant += ((-1) ** col) * matrix[0][col] * calculate_determinant(minor)
+        determinant += ((-1) ** col) * matrix[0][col] * determinant(minor)
     
     return determinant
-print(calculate_determinant(ut))
+
